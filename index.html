@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DevOps Engineer portfolio showcasing AWS architecture, automation, Linux and security projects.">
+  <meta name="description" content="DevOps Engineer portfolio showcasing automation, Linux, cloud engineering and security projects.">
   <title>DevOps Engineer | Maema Mazunda</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,12 +14,19 @@
 <body>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
   <canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
-  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Home">MM<span>.</span></a>
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">&#x2630;</button>
     <nav class="main-nav" id="mainNav">
-      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#playground">Playground</a><a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#playground">Playground</a>
+      <a href="#contact">Contact</a>
     </nav>
     <a class="header-cta" href="mailto:maemamazunda10@gmail.com">Let's connect <span>&#x2197;</span></a>
   </header>
@@ -40,15 +48,20 @@
           <div><strong>Linux</strong><span>Systems & troubleshooting</span></div>
         </div>
       </div>
+
       <div class="hero-art" aria-label="Animated portfolio AI robot">
-        <div class="orbit orbit-outer"></div><div class="orbit orbit-inner"></div>
-        <div class="orbit-node node-one"></div><div class="orbit-node node-two"></div>
+        <div class="orbit orbit-outer"></div>
+        <div class="orbit orbit-inner"></div>
+        <div class="orbit-node node-one"></div>
+        <div class="orbit-node node-two"></div>
         <button class="robot" id="robot" type="button" aria-label="Poke the robot">
           <div class="robot-antenna"><i></i></div>
           <div class="robot-head">
-            <span class="ear ear-left"></span><span class="ear ear-right"></span>
+            <span class="ear ear-left"></span>
+            <span class="ear ear-right"></span>
             <div class="robot-glass" id="robotGlass">
-              <div class="eyes" id="robotEyes"><i></i><i></i></div><div class="mouth"></div>
+              <div class="eyes" id="robotEyes"><i></i><i></i></div>
+              <div class="mouth"></div>
             </div>
           </div>
           <div class="robot-neck"></div>
@@ -62,17 +75,29 @@
 
     <section class="section-wrap section-block" id="about">
       <div class="section-kicker">01 / ABOUT</div>
-      <div class="section-heading"><h2>Curious by nature.<br><span>Engineering-minded.</span></h2><p>My focus is turning technical concepts into practical solutions and continuously strengthening my engineering capabilities.</p></div>
+      <div class="section-heading">
+        <h2>Curious by nature.<br><span>Engineering-minded.</span></h2>
+        <p>My focus is turning technical concepts into practical solutions and continuously strengthening my engineering capabilities.</p>
+      </div>
       <div class="about-panel">
         <div class="about-mark">MM<span>.</span></div>
-        <div><h3>My approach</h3><p>I enjoy working through infrastructure challenges, understanding how systems connect, and using automation to reduce repetitive work. My portfolio brings together practical project work and ongoing technical development.</p></div>
-        <div class="about-aside"><span class="mono">CURRENT FOCUS</span><strong>Cloud engineering<br>Infrastructure automation<br>Reliable systems</strong></div>
+        <div>
+          <h3>My approach</h3>
+          <p>I enjoy working through infrastructure challenges, understanding how systems connect, and using automation to reduce repetitive work. My portfolio brings together practical project work and ongoing technical development.</p>
+        </div>
+        <div class="about-aside">
+          <span class="mono">CURRENT FOCUS</span>
+          <strong>Cloud engineering<br>Infrastructure automation<br>Reliable systems</strong>
+        </div>
       </div>
     </section>
 
     <section class="section-wrap section-block" id="skills">
       <div class="section-kicker">02 / TOOLKIT</div>
-      <div class="section-heading"><h2>Technology I <span>work with.</span></h2><p>A mix of hands-on experience and technologies I am actively developing.</p></div>
+      <div class="section-heading">
+        <h2>Technology I <span>work with.</span></h2>
+        <p>A mix of hands-on experience and technologies I am actively developing.</p>
+      </div>
       <div class="skill-grid">
         <article class="skill"><div class="skill-icon">&#x2601;</div><h3>AWS</h3><p>VPC, EC2, ALB, Auto Scaling, CloudFront, RDS, S3, NAT Gateway and VPN concepts.</p><span class="skill-type">CLOUD</span></article>
         <article class="skill"><div class="skill-icon">&#x2318;</div><h3>Linux & Systems</h3><p>Command-line operations, SSH access, troubleshooting and server-side investigation.</p><span class="skill-type">SYSTEMS</span></article>
@@ -85,66 +110,66 @@
 
     <section class="section-wrap section-block" id="projects">
       <div class="section-kicker">03 / SELECTED WORK</div>
-      <div class="section-heading"><h2>Projects with <span>purpose.</span></h2><p>Architecture, automation and technical investigation. Select a project to inspect its architecture diagram.</p></div>
+      <div class="section-heading">
+        <h2>Projects with <span>purpose.</span></h2>
+        <p>Automation, security investigation and application development.</p>
+      </div>
       <div class="filter-row" role="group" aria-label="Filter projects">
         <button class="filter-chip active" data-filter="all" aria-pressed="true">All</button>
-        <button class="filter-chip" data-filter="aws" aria-pressed="false">AWS</button>
         <button class="filter-chip" data-filter="automation" aria-pressed="false">Automation</button>
         <button class="filter-chip" data-filter="security" aria-pressed="false">Security</button>
         <button class="filter-chip" data-filter="learning" aria-pressed="false">Learning</button>
       </div>
+
       <div class="project-grid">
-        <article class="project-card project-featured" data-category="aws">
-          <div class="project-meta"><span>PROJECT 01</span><span>AWS / ARCHITECTURE</span></div>
-          <h3>AWS Three-Tier Web Application</h3>
-          <p>Designed a multi-AZ web application architecture using CloudFront, an Application Load Balancer, EC2 Auto Scaling and an Amazon RDS MySQL primary database with a read replica. The design separates public, web and database subnet tiers.</p>
-          <div class="tag-row"><span>VPC</span><span>CloudFront</span><span>ALB</span><span>EC2</span><span>Auto Scaling</span><span>RDS MySQL</span><span>NAT Gateway</span></div>
-          <button class="diagram-button" data-image="assets/aws-three-tier-architecture.png" data-title="AWS Three-Tier Web Application">View architecture <span>&#x2197;</span></button>
-          <img class="project-thumb" src="assets/aws-three-tier-architecture.png" alt="AWS three-tier web application architecture diagram">
-        </article>
-        <article class="project-card project-featured" data-category="aws">
-          <div class="project-meta"><span>PROJECT 02</span><span>AWS / ENHANCEMENT</span></div>
-          <h3>Enhanced AWS Infrastructure Design</h3>
-          <p>Further developed the architecture view to include application security groups, CloudWatch alarms and S3 storage. Terraform and GitHub are represented in the supporting engineering workflow.</p>
-          <div class="tag-row"><span>Security Groups</span><span>CloudWatch</span><span>S3</span><span>Terraform</span><span>GitHub</span></div>
-          <button class="diagram-button" data-image="assets/aws-enhanced-architecture.png" data-title="Enhanced AWS Infrastructure Design">View architecture <span>&#x2197;</span></button>
-          <img class="project-thumb" src="assets/aws-enhanced-architecture.png" alt="Enhanced AWS three-tier application architecture diagram">
-        </article>
         <article class="project-card" data-category="automation">
-          <div class="project-meta"><span>PROJECT 03</span><span>RPA / AUTOMATION</span></div>
+          <div class="project-meta"><span>PROJECT 01</span><span>RPA / AUTOMATION</span></div>
           <h3>UiPath Invoice Automation</h3>
           <p>Built invoice automation workflows covering information extraction, register updates, document generation and email-based processing.</p>
           <div class="tag-row"><span>UiPath</span><span>RPA</span><span>Excel</span><span>Document Automation</span></div>
         </article>
+
         <article class="project-card" data-category="security">
-          <div class="project-meta"><span>PROJECT 04</span><span>SECURITY / LINUX</span></div>
+          <div class="project-meta"><span>PROJECT 02</span><span>SECURITY / LINUX</span></div>
           <h3>WordPress Security Investigation</h3>
           <p>Contributed to investigating and cleaning malware-affected WordPress websites using cPanel, Linux commands and SSH access. Client-specific information is intentionally omitted.</p>
           <div class="tag-row"><span>WordPress</span><span>cPanel</span><span>Linux</span><span>SSH</span></div>
         </article>
+
         <article class="project-card" data-category="learning">
-          <div class="project-meta"><span>PROJECT 05</span><span>LEARNING / DEVELOPMENT</span></div>
+          <div class="project-meta"><span>PROJECT 03</span><span>LEARNING / DEVELOPMENT</span></div>
           <h3>Invoice Management Application</h3>
           <p>A progressive full-stack learning project exploring a web frontend, Python/FastAPI backend, PostgreSQL, testing, Docker and AWS deployment concepts.</p>
           <div class="tag-row"><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span></div>
         </article>
       </div>
+
       <p class="project-note">Project descriptions distinguish practical work from learning projects. Only claim implementation or deployment activities you personally completed.</p>
     </section>
 
     <section class="section-wrap section-block" id="experience">
       <div class="section-kicker">04 / EXPERIENCE</div>
-      <div class="section-heading"><h2>Professional <span>journey.</span></h2><p>My current professional focus and continued development in cloud and DevOps engineering.</p></div>
+      <div class="section-heading">
+        <h2>Professional <span>journey.</span></h2>
+        <p>My current professional focus and continued development in cloud and DevOps engineering.</p>
+      </div>
       <div class="experience-card">
         <div class="experience-date mono">CURRENT ROLE</div>
-        <div><h3>DevOps Engineer</h3><p class="company">Cloudstead</p><p>Working across cloud infrastructure, automation, Linux systems and technical operations, while continuing to build practical engineering capability.</p></div>
+        <div>
+          <h3>DevOps Engineer</h3>
+          <p class="company">Cloudstead</p>
+          <p>Working across cloud infrastructure, automation, Linux systems and technical operations, while continuing to build practical engineering capability.</p>
+        </div>
         <div class="experience-status"><span class="live-dot"></span> CURRENT</div>
       </div>
     </section>
 
     <section class="section-wrap section-block" id="playground">
       <div class="section-kicker">05 / PLAYGROUND</div>
-      <div class="section-heading"><h2>Take the shell <span>for a spin.</span></h2><p>Type a command or tap one below. Try <code>deploy</code> to run a pipeline &#x2014; and see what <code>sudo hire-me</code> does.</p></div>
+      <div class="section-heading">
+        <h2>Take the shell <span>for a spin.</span></h2>
+        <p>Type a command or tap one below. Try <code>deploy</code> to run a pipeline &#x2014; and see what <code>sudo hire-me</code> does.</p>
+      </div>
       <div class="terminal" id="terminal">
         <div class="terminal-bar"><i></i><i></i><i></i><span>guest@maema-portfolio: ~</span></div>
         <div class="terminal-output" id="terminalOutput" aria-live="polite"></div>
@@ -154,7 +179,12 @@
         </form>
       </div>
       <div class="command-chips" id="commandChips">
-        <button data-cmd="help">help</button><button data-cmd="whoami">whoami</button><button data-cmd="skills">skills</button><button data-cmd="projects">projects</button><button data-cmd="deploy">deploy</button><button data-cmd="sudo hire-me">sudo hire-me</button>
+        <button data-cmd="help">help</button>
+        <button data-cmd="whoami">whoami</button>
+        <button data-cmd="skills">skills</button>
+        <button data-cmd="projects">projects</button>
+        <button data-cmd="deploy">deploy</button>
+        <button data-cmd="sudo hire-me">sudo hire-me</button>
       </div>
     </section>
 
@@ -164,24 +194,44 @@
       <h2>Let's build something<br><span>that matters.</span></h2>
       <p>For professional enquiries and conversations about cloud, DevOps and automation.</p>
       <a class="email-link" href="mailto:maemamazunda10@gmail.com">maemamazunda10@gmail.com <span>&#x2197;</span></a>
-      <div class="contact-actions"><a class="btn btn-primary" href="mailto:maemamazunda10@gmail.com?subject=Professional%20Enquiry">Email me</a><button class="btn btn-quiet" id="copyEmail" type="button">Copy email</button></div>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="mailto:maemamazunda10@gmail.com?subject=Professional%20Enquiry">Email me</a>
+        <button class="btn btn-quiet" id="copyEmail" type="button">Copy email</button>
+      </div>
       <span class="copy-feedback" id="copyFeedback" aria-live="polite"></span>
     </section>
   </main>
 
-  <footer class="site-footer"><a class="brand" href="#home">MM<span>.</span></a><span>Designed & built by Maema Mazunda</span><a href="#home">Back to top &#x2191;</a></footer>
+  <footer class="site-footer">
+    <a class="brand" href="#home">MM<span>.</span></a>
+    <span>Designed & built by Maema Mazunda</span>
+    <a href="#home">Back to top &#x2191;</a>
+  </footer>
 
-  <!-- Interactive portfolio assistant: demo knowledge base, not connected to a live AI model yet. -->
+  <!-- Portfolio assistant: curated demo knowledge base, not a live AI model. -->
   <button class="assistant-launcher" id="assistantLauncher" aria-label="Open portfolio assistant"><span class="launcher-orb">&#x2733;</span><span>Ask my AI</span></button>
+
   <aside class="chat-panel" id="chatPanel" aria-label="Portfolio assistant" aria-hidden="true">
-    <div class="chat-header"><div class="chat-avatar">&#x2733;</div><div><strong>Portfolio Assistant</strong><small><i></i> Ready to help</small></div><button id="closeChat" aria-label="Close chat">&#xD7;</button></div>
-    <div class="chat-messages" id="chatMessages" aria-live="polite"><div class="message bot-message">Hi! I'm the portfolio assistant. Ask me about Maema's AWS architecture, DevOps skills, UiPath automation or technical projects.</div></div>
-    <div class="suggested-questions"><button data-question="Tell me about the AWS three-tier architecture.">AWS architecture</button><button data-question="What automation projects are featured?">Automation</button><button data-question="What skills are listed?">Skills</button></div>
-    <form class="chat-form" id="chatForm"><input id="chatInput" type="text" placeholder="Ask about this portfolio..." autocomplete="off" required><button type="submit" aria-label="Send">&#x27A4;</button></form>
+    <div class="chat-header">
+      <div class="chat-avatar">&#x2733;</div>
+      <div><strong>Portfolio Assistant</strong><small><i></i> Ready to help</small></div>
+      <button id="closeChat" aria-label="Close chat">&#xD7;</button>
+    </div>
+    <div class="chat-messages" id="chatMessages" aria-live="polite">
+      <div class="message bot-message">Hi! I'm the portfolio assistant. Ask me about Maema's DevOps skills, UiPath automation, Linux systems or technical projects.</div>
+    </div>
+    <div class="suggested-questions">
+      <button data-question="Tell me about the automation project.">Automation</button>
+      <button data-question="What skills are listed?">Skills</button>
+      <button data-question="Tell me about the security investigation.">Security</button>
+    </div>
+    <form class="chat-form" id="chatForm">
+      <input id="chatInput" type="text" placeholder="Ask about this portfolio..." autocomplete="off" required>
+      <button type="submit" aria-label="Send">&#x27A4;</button>
+    </form>
     <p class="chat-footnote">Portfolio demo &#xB7; responses use a curated knowledge base</p>
   </aside>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true"><button id="lightboxClose" aria-label="Close image">&#xD7;</button><p id="lightboxTitle"></p><img id="lightboxImage" src="" alt="Architecture diagram enlarged"></div>
   <script src="script.js"></script>
 </body>
 </html>
