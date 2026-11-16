@@ -149,7 +149,7 @@ document.querySelectorAll(".project-thumb").forEach(img => {
   img.addEventListener("error", () => {
     const note = document.createElement("div");
     note.className = "thumb-missing";
-    note.textContent = "Diagram unavailable — check assets/ folder";
+    note.textContent = "Diagram unavailable \u2014 check assets/ folder";
     img.replaceWith(note);
     if (button) button.style.display = "none";
   });
@@ -171,7 +171,7 @@ onScroll();
 
 // Rotating typed headline
 const typedEl = document.getElementById("typedLine");
-const phrases = ["building what’s next.", "automating the boring.", "keeping servers happy.", "shipping to the cloud.", "never breaking prod."];
+const phrases = ["building what\u2019s next.", "automating the boring.", "keeping servers happy.", "shipping to the cloud.", "never breaking prod."];
 if (!reduceMotion) {
   let p = 0, c = phrases[0].length, deleting = true;
   setTimeout(function tick() {
@@ -204,13 +204,13 @@ if (finePointer && !reduceMotion) {
 const quips = [
   "Hi! I'm running on 100% uptime and good vibes.",
   "Did you know? This robot is pure CSS. No images were harmed.",
-  "terraform apply… just kidding, I only plan.",
+  "terraform apply\u2026 just kidding, I only plan.",
   "Ouch. That's an unauthorised request. 403!",
   "Auto Scaling engaged: I feel taller already.",
   "Have you tried turning it off and on again?",
   "My favourite exercise? Load balancing.",
-  "Try the terminal below — type 'deploy'.",
-  "OK, I'm getting dizzy now…"
+  "Try the terminal below \u2014 type 'deploy'.",
+  "OK, I'm getting dizzy now\u2026"
 ];
 let pokes = 0, bubbleTimer;
 function say(text, ms = 3000) {
@@ -225,11 +225,11 @@ robot.addEventListener("click", () => {
   robot.classList.remove("happy", "dizzy", "boost");
   void robot.offsetWidth;
   if (pokes % 9 === 0) { robot.classList.add("dizzy"); say(quips[8]); }
-  else if (pokes === 15) { robot.classList.add("happy"); say("15 pokes! You've unlocked: confetti. 🎉"); burstConfetti(); }
+  else if (pokes === 15) { robot.classList.add("happy"); say("15 pokes! You've unlocked: confetti. \u{1F389}"); burstConfetti(); }
   else { robot.classList.add(pokes % 2 ? "happy" : "boost"); say(quips[(pokes - 1) % 8]); }
   setTimeout(() => robot.classList.remove("happy", "boost"), 1400);
 });
-setTimeout(() => say("Psst… click me.", 2600), 1800);
+setTimeout(() => say("Psst\u2026 click me.", 2600), 1800);
 
 // Skill cards: spotlight follows the pointer
 document.querySelectorAll(".skill").forEach(card => {
@@ -304,18 +304,18 @@ const commands = {
   <span class="t-accent">whoami</span>       who built this site
   <span class="t-accent">skills</span>       toolkit overview
   <span class="t-accent">projects</span>     list featured work
-  <span class="t-accent">open</span> &lt;n&gt;     jump to project n (1–5)
+  <span class="t-accent">open</span> &lt;n&gt;     jump to project n (1\u20135)
   <span class="t-accent">deploy</span>       run the CI/CD pipeline
   <span class="t-accent">uptime</span>       how long you've been here
   <span class="t-accent">contact</span>      get in touch
   <span class="t-accent">theme</span>        toggle the neon
   <span class="t-accent">clear</span>        clear the screen
-<span class="t-muted">Tip: ↑/↓ for history, Tab to autocomplete.</span>`),
-  whoami: () => print(`<span class="t-ok">maema-mazunda</span> — DevOps Engineer @ Cloudstead
-Cloud infrastructure · automation · Linux systems`),
+<span class="t-muted">Tip: \u2191/\u2193 for history, Tab to autocomplete.</span>`),
+  whoami: () => print(`<span class="t-ok">maema-mazunda</span> \u2014 DevOps Engineer @ Cloudstead
+Cloud infrastructure \u00B7 automation \u00B7 Linux systems`),
   skills: () => {
     const rows = [["AWS", 9], ["Linux & SSH", 8], ["Terraform / IaC", 7], ["UiPath RPA", 7], ["Python & FastAPI", 6], ["Web (HTML/CSS/JS)", 6]];
-    print(rows.map(([n, v]) => `${n.padEnd(19)}<span class="bar">${"█".repeat(v)}</span><span class="t-muted">${"░".repeat(10 - v)}</span>`).join("\n"));
+    print(rows.map(([n, v]) => `${n.padEnd(19)}<span class="bar">${"\u2588".repeat(v)}</span><span class="t-muted">${"\u2591".repeat(10 - v)}</span>`).join("\n"));
     print(`<span class="t-muted">Bars show focus areas, not exam scores.</span>`);
   },
   projects: () => print([...document.querySelectorAll(".project-card h3")]
@@ -326,7 +326,7 @@ Cloud infrastructure · automation · Linux systems`),
     document.querySelector('.filter-chip[data-filter="all"]').click();
     list[n - 1].scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
     list[n - 1].classList.remove("pop"); void list[n - 1].offsetWidth; list[n - 1].classList.add("pop");
-    print(`Opening project ${n}…`, "t-ok");
+    print(`Opening project ${n}\u2026`, "t-ok");
   },
   uptime: () => {
     const s = Math.floor(performance.now() / 1000);
@@ -343,48 +343,48 @@ Cloud infrastructure · automation · Linux systems`),
   clear: () => { termOut.innerHTML = ""; },
   ls: () => print("about/  skills/  projects/  experience/  contact/  <span class='t-ok'>secret.txt</span>"),
   "cat": arg => arg === "secret.txt"
-    ? print("There's no secret. But try 'sudo hire-me'. 😉", "t-warn")
+    ? print("There's no secret. But try 'sudo hire-me'. \u{1F609}", "t-warn")
     : print(`cat: ${esc(arg || "")}: No such file`, "t-err"),
-  "rm": () => print("Nice try. This portfolio is immutable infrastructure. 🔒", "t-warn"),
+  "rm": () => print("Nice try. This portfolio is immutable infrastructure. \u{1F512}", "t-warn"),
   sudo: async arg => {
     if (arg === "hire-me") {
       print("[sudo] password for guest: ********", "t-muted");
       await wait(600);
-      print("Access granted ✔ Excellent decision.", "t-ok");
+      print("Access granted \u2714 Excellent decision.", "t-ok");
       burstConfetti();
-      print(`Opening your mail client… <a class="t-accent" href="mailto:maemamazunda10@gmail.com?subject=Let's%20work%20together">or click here</a>`);
+      print(`Opening your mail client\u2026 <a class="t-accent" href="mailto:maemamazunda10@gmail.com?subject=Let's%20work%20together">or click here</a>`);
       await wait(900);
       location.href = "mailto:maemamazunda10@gmail.com?subject=Let's%20work%20together";
-    } else print(`guest is not in the sudoers file. This incident will be reported. 🚨\n<span class="t-muted">(Hint: try 'sudo hire-me')</span>`, "t-err");
+    } else print(`guest is not in the sudoers file. This incident will be reported. \u{1F6A8}\n<span class="t-muted">(Hint: try 'sudo hire-me')</span>`, "t-err");
   },
   deploy: async () => {
     const stages = [
       ["Checkout", "git clone portfolio.git", 500],
-      ["Lint", "html, css, js … 0 problems", 600],
+      ["Lint", "html, css, js \u2026 0 problems", 600],
       ["Test", "running 42 tests", 900],
       ["Plan", "terraform plan: 3 to add, 0 to change, 0 to destroy", 800],
-      ["Deploy", "ALB → Auto Scaling group (2 AZs)", 1000],
-      ["Health", "GET /health → 200 OK", 500]
+      ["Deploy", "ALB \u2192 Auto Scaling group (2 AZs)", 1000],
+      ["Health", "GET /health \u2192 200 OK", 500]
     ];
-    print(`<span class="t-accent">▶ Pipeline #${Math.floor(Math.random() * 900 + 100)} started</span>`);
+    print(`<span class="t-accent">\u25B6 Pipeline #${Math.floor(Math.random() * 900 + 100)} started</span>`);
     const flaky = Math.random() < 0.35;
     for (const [name, detail, ms] of stages) {
-      const line = print(`  ⠋ ${name.padEnd(8)}<span class="t-muted">${detail}</span>`);
-      const frames = "⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏"; let f = 0;
+      const line = print(`  \u280B ${name.padEnd(8)}<span class="t-muted">${detail}</span>`);
+      const frames = "\u280B\u2819\u2839\u2838\u283C\u2834\u2826\u2827\u2807\u280F"; let f = 0;
       const spin = setInterval(() => { line.firstChild.textContent = `  ${frames[++f % 10]} ${name.padEnd(8)}`; }, 80);
       await wait(ms);
       if (name === "Test" && flaky) {
         clearInterval(spin);
-        line.innerHTML = `  <span class="t-err">✖ ${name.padEnd(8)}</span><span class="t-muted">1 flaky test failed</span>`;
-        print(`  <span class="t-warn">↻ retrying…</span>`);
+        line.innerHTML = `  <span class="t-err">\u2716 ${name.padEnd(8)}</span><span class="t-muted">1 flaky test failed</span>`;
+        print(`  <span class="t-warn">\u21BB retrying\u2026</span>`);
         await wait(700);
-        print(`  <span class="t-ok">✔ ${name.padEnd(8)}</span><span class="t-muted">42 passed on retry</span>`);
+        print(`  <span class="t-ok">\u2714 ${name.padEnd(8)}</span><span class="t-muted">42 passed on retry</span>`);
         continue;
       }
       clearInterval(spin);
-      line.innerHTML = `  <span class="t-ok">✔ ${name.padEnd(8)}</span><span class="t-muted">${detail}</span>`;
+      line.innerHTML = `  <span class="t-ok">\u2714 ${name.padEnd(8)}</span><span class="t-muted">${detail}</span>`;
     }
-    print(`<span class="t-ok">✔ Deployed successfully.</span> You're looking at it. 🚀`);
+    print(`<span class="t-ok">\u2714 Deployed successfully.</span> You're looking at it. \u{1F680}`);
     burstConfetti();
   }
 };
@@ -429,10 +429,10 @@ document.querySelectorAll("#commandChips button").forEach(btn =>
 print(`Welcome to <span class="t-accent">maema-portfolio</span> (Linux 6.x, totally real).`);
 print(`Type <span class="t-accent">help</span> to see what you can do.`, "t-muted");
 
-// Konami code easter egg: ↑ ↑ ↓ ↓ ← → ← → b a
+// Konami code easter egg: \u2191 \u2191 \u2193 \u2193 \u2190 \u2192 \u2190 \u2192 b a
 const konami = ["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight","ArrowLeft","ArrowRight","b","a"];
 let kIndex = 0;
 addEventListener("keydown", e => {
   kIndex = e.key === konami[kIndex] ? kIndex + 1 : (e.key === konami[0] ? 1 : 0);
-  if (kIndex === konami.length) { kIndex = 0; burstConfetti(); say("Cheat code accepted. +30 lives. 🕹️", 3500); }
+  if (kIndex === konami.length) { kIndex = 0; burstConfetti(); say("Cheat code accepted. +30 lives. \u{1F579}\uFE0F", 3500); }
 });
